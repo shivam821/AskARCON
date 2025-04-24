@@ -1,0 +1,18 @@
+[
+    {
+        "question": "Retrieval of the RSA public key is not enabled for insecure connections. We are encountering this issue while executing scripts via the MySQL Vault Executor. This problem may arise if the authentication method is set to 'mysql_native_password,' indicating that the server is using an older and less secure authentication method.",
+        "answer": "Resolution : To resolve this issue, log in to Workbench using the same user account that you are using to connect to the MySQL Vault Executor. Then, execute the following query in the arcosdb. After this, try running the scripts again using the Vault Executor. SHOW variables like default_authentication_plugin; insert into default_authentication_plugin (Variable_name,value) values  (allowPublicKeyRetrieval ,1)"
+    },
+    {
+        "question": "Restrict Manual interruption issue for the App Web Browser and MS SQL EM Local Connector.",
+        "answer": "Resolution : Go to Edit group policy on the AGW Server: and disable the above mentioned the policy. NOTE: Restart of the server or End user machine is also required after changing the policy."
+    },
+    {
+        "question": "Error: Exception has been thrown by the target of an invocation while taking an SSO.",
+        "answer": "Resolution : Check if FIPS policy is enabled or disabled as it should be disabled. {Disable FIPS Policy on End user machine}"
+    },    
+    {
+        "question": "Server Error in '/' Application.",
+        "answer": "Resolution: Create a new folder named ErrorLog in C Drive and inside that create a new text file named error.log"
+    }
+]
